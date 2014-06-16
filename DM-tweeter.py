@@ -23,7 +23,7 @@ class StreamProcessor(tweetpony.StreamProcessor):
 		if any(screen_name in s for s in lines):
 			print("User authorised")
 			try:
-    				#api.update_status(status = text)
+    				api.update_status(status = text)
 				print(text)
 			except tweetpony.APIError as err:
 			    print "Twitter returned error #%i and said: %s" % (err.code, err.description)
